@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MAZA Contractors</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+</head>
+<body>
+  <header class="hero-header">
+    <div class="intro-label">WELCOME TO</div>
+    <h1>MAZA Contractors</h1>
+    <h2>Custom Construction. Trusted Quality.</h2>
+    <button class="learn-btn" onclick="scrollToHero()">LEARN MORE</button>
+  </header>
+  <div class="light-section-wrapper">
+    <nav class="main-nav">
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#quote">Free Quote</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero-message fade-up particle-bg" id="heroAnchor">
+      <div id="tsparticles" class="particles-container"></div>
+      <div class="hero-text">
+        <h2>Let's Build Something Great Together</h2>
+        <p>Start your next construction project with a team you can trust.</p>
+        <button class="cta-btn">Explore Our Work</button>
+      </div>
+    </section>
+
+    <section id="services" class="services-modern fade-up">
+      <div class="services-header">
+        <div class="services-text">
+          <h2>What we can do<br>for you</h2>
+        </div>
+        <div class="services-desc">
+          <p>From design to installation, we provide quality contracting solutions tailored to your needs.</p>
+          <button class="services-btn">See our services <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      <div class="services-cards-scroll">
+        <div class="service-thumb" style="background-image: url('renopics/customedesign.jpg')">
+          <span>Custom Design</span><i class="fas fa-arrow-up-right-from-square"></i>
+        </div>
+        <div class="service-thumb" style="background-image: url('renopics/basementreno.jpg')">
+          <span>Basement Renovation</span><i class="fas fa-arrow-up-right-from-square"></i>
+        </div>
+        <div class="service-thumb" style="background-image: url('renopics/kitchenreno.jpg')">
+          <span>Kitchen Remodeling</span><i class="fas fa-arrow-up-right-from-square"></i>
+        </div>
+        <div class="service-thumb" style="background-image: url('renopics/finishcarpentry.jpeg')">
+          <span>Finish Carpentry</span><i class="fas fa-arrow-up-right-from-square"></i>
+        </div>
+        <div class="service-thumb" style="background-image: url('renopics/landscaping.jpg')">
+          <span>Exterior Work</span><i class="fas fa-arrow-up-right-from-square"></i>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section fade-up bordered-section">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>MAZA Contractors is a trusted name in the construction industry. With over 20 years of experience, we deliver top-quality workmanship, on-time project completion, and exceptional customer service.</p>
+          <blockquote>
+            "We build with passion, precision, and purpose."
+          </blockquote>
+        </div>
+        <div class="about-img">
+          <img src="https://via.placeholder.com/500x300?text=About+Us" alt="About Maza Contractors">
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section fade-up bordered-section">
+      <h2>Project Gallery</h2>
+      <div class="gallery-grid">
+    <div class="album">
+      <h3>Modern Kitchen Renovation</h3>
+      <div class="carousel" data-index="0">
+        <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+        <img src="renopics/bluereno1.jpeg" alt="Kitchen Project Image">
+        <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div class="album">
+      <h3>Commercial Office Upgrade</h3>
+      <div class="carousel" data-index="0">
+        <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+        <img src="renopics/colorfulreno1.jpeg" alt="Office Project Image">
+        <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div class="album">
+      <h3>Exterior Facade Makeover</h3>
+      <div class="carousel" data-index="0">
+        <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+        <img src="renopics/lightsreno1.jpeg" alt="Facade Project Image">
+        <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div class="album">
+      <h3>Luxury Basement Finish</h3>
+      <div class="carousel" data-index="0">
+        <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+        <img src="renopics/smallreno1.jpeg" alt="Basement Project Image">
+        <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div class="album">
+      <h3>Custom Deck Build</h3>
+      <div class="carousel" data-index="0">
+        <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+        <img src="renopics/deck1.jpeg" alt="Deck Project Image">
+        <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div class="album">
+      <h3>Interior Finish Carpentry</h3>
+      <div class="carousel" data-index="0">
+        <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+        <img src="renopics/carpentry1.jpeg" alt="Carpentry Project Image">
+        <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="testimonials" class="testimonials-section-press fade-up">
+  <div class="testimonials-overlay">
+    <h2>Testimonials</h2>
+    <div class="testimonial-columns">
+      <div class="testimonial-block">
+        <p>“The MAZA Contractors team was fantastic from start to finish. They brought our vision to life with precision and care.”</p>
+        <cite>– Sarah M., Homeowner</cite>
+      </div>
+      <div class="testimonial-block">
+        <p>“High-quality work, great communication, and everything was done on schedule.”</p>
+        <cite>– James R., Property Manager</cite>
+      </div>
+      <div class="testimonial-block">
+        <p>“From planning to execution, their craftsmanship exceeded expectations. Highly recommend.”</p>
+        <cite>– BuildOntario Magazine</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="quote" class="quote-section fade-up">
+    <h2>Get a Free Quote</h2>
+    <form class="quote-form" id="quoteForm">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-row">
+        <input type="text" name="phone" placeholder="Phone Number">
+        <textarea name="details" rows="5" placeholder="Project Details" required></textarea>
+      </div>
+      <button type="submit">Request Quote</button>
+      <p class="success-message" id="successMessage" style="display:none">Thank you! Your quote has been submitted.</p>
+    </form>
+  </section>
+  </div>
+
+  <footer class="contact-modern fade-up" id="contact">
+    <div class="footer-title">MAZA Contractors</div>
+    <div class="footer-columns">
+      <div class="footer-box">
+        <h4>Contact</h4>
+        <p><i class="fas fa-envelope"></i> info@mazacontractors.ca</p>
+        <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+        <p><i class="fas fa-map-marker-alt"></i> Mississauga, GTA & beyond</p>
+      </div>
+      <div class="footer-box">
+        <h4>Office Hours</h4>
+        <p>Mon – Fri: 9:00 AM – 6:00 PM</p>
+        <p>Sat: 9:00 AM – 12:00 PM</p>
+      </div>
+      <div class="footer-box">
+        <h4>Get Social</h4>
+        <p class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </p>
+        <button class="tag-button">Tag us in your builds!</button>
+      </div>
+    </div>
+  </footer>
+
+  <footer class="footer">
+    <p>&copy; 2025 MAZA Contractors. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function scrollToHero() {
+      const hero = document.getElementById('heroAnchor');
+      hero.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const imageSets = {
+        kitchen: [
+          'renopics/bluereno1.jpeg',
+          'renopics/bluereno2.jpeg',
+          'renopics/bluereno3.jpeg',
+          'renopics/bluereno4.jpeg'
+        ],
+        office: [
+          'renopics/colorfulreno1.jpeg',
+          'renopics/colorfulreno2.jpeg'
+        ],
+        facade: [
+          'renopics/lightsreno1.jpeg',
+          'renopics/lightsreno2.jpeg',
+          'renopics/lightsreno3.jpeg',
+          'renopics/lightsreno4.jpeg'
+        ],
+        basement: [
+          'renopics/smallreno1.jpeg',
+          'renopics/smallreno2.jpeg',
+          'renopics/smallreno3.jpeg',
+          'renopics/smallreno4.jpeg'
+        ]
+      };
+
+      const carouselKeys = ['kitchen', 'office', 'facade', 'basement'];
+
+      document.querySelectorAll('.carousel').forEach((carousel, i) => {
+  const key = carouselKeys[i];
+  const images = imageSets[key];
+  if (!images || images.length === 0) return;
+
+  const prev = carousel.querySelector('.carousel-prev');
+  const next = carousel.querySelector('.carousel-next');
+
+  let index = 0;
+
+  // Build wrapper
+  const wrapper = document.createElement('div');
+  wrapper.classList.add('carousel-wrapper');
+  carousel.querySelector('img').replaceWith(wrapper);
+
+  // Create all glightbox image links (only first is visible)
+  const links = images.map((src, idx) => {
+    const a = document.createElement('a');
+    a.href = src;
+    a.className = 'glightbox';
+    a.setAttribute('data-gallery', key);
+    a.style.display = idx === 0 ? 'block' : 'none';
+
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = `${key} image ${idx + 1}`;
+    img.loading = 'lazy';
+    a.appendChild(img);
+    wrapper.appendChild(a);
+    return a;
+  });
+
+  function updateImage() {
+    links.forEach((a, idx) => {
+      a.style.display = idx === index ? 'block' : 'none';
+    });
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
+
+  const dotContainer = document.createElement('div');
+  dotContainer.classList.add('carousel-dots');
+  carousel.insertAdjacentElement('afterend', dotContainer);
+
+  const dots = images.map((_, idx) => {
+    const dot = document.createElement('span');
+    dot.classList.add('carousel-dot');
+    if (idx === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+      index = idx;
+      updateImage();
+    });
+    dotContainer.appendChild(dot);
+    return dot;
+  });
+
+  prev.addEventListener('click', () => {
+    index = (index - 1 + images.length) % images.length;
+    updateImage();
+  });
+
+  next.addEventListener('click', () => {
+    index = (index + 1) % images.length;
+    updateImage();
+  });
+
+  updateImage();
+});
+
+      GLightbox({ selector: '.glightbox' });
+
+      // Back to top
+      const btn = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+      });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Scroll animations
+      const fadeElements = document.querySelectorAll('.fade-up');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      fadeElements.forEach(el => observer.observe(el));
+    });
+
+    // ✅ Particle background load
+    tsParticles.load('tsparticles', {
+      fullScreen: { enable: false },
+      fpsLimit: 60,
+      particles: {
+        number: { value: 70 },
+        color: { value: '#ffffff' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.4, random: true },
+        size: { value: 3, random: true },
+        move: {
+          enable: true,
+          speed: 1.5,
+          direction: 'none',
+          random: false,
+          straight: false,
+          outMode: 'bounce'
+        },
+        line_linked: {
+          enable: true,
+          distance: 120,
+          color: '#888888',
+          opacity: 0.3,
+          width: 1
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: 'grab' },
+          onclick: { enable: true, mode: 'push' },
+          resize: true
+        },
+        modes: {
+          grab: { distance: 140, line_linked: { opacity: 0.6 } },
+          push: { quantity: 4 }
+        }
+      },
+      detectRetina: true
+    });
+
+  document.getElementById('quoteForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      details: form.details.value
+    };
+
+    try {
+      const res = await fetch('http://localhost:5000/submit-quote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const result = await res.json();
+      if (res.ok) {
+        form.reset();
+        document.getElementById('successMessage').style.display = 'block';
+      } else {
+        alert(result.message || 'Submission failed.');
+      }
+    } catch (err) {
+      alert('Error sending quote.');
+    }
+  });
+
+  const fadeElements = document.querySelectorAll('.fade-up');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  fadeElements.forEach(el => observer.observe(el));
+</script>
+
+<button id="backToTop" title="Back to top">↑</button>
+<script>
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>
