@@ -710,3 +710,59 @@ section h2 {
 #backToTop:hover {
   background-color: var(--accent);
 }
+
+/* Small screens: Mobile */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .hero-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .services-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-section .about-content {
+    flex-direction: column;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel {
+    height: 280px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .quote-form button {
+    align-self: stretch;
+  }
+}
+
