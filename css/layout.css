@@ -1,0 +1,64 @@
+/* ============================================================
+   LAYOUT — page structure, containers, animations
+   ============================================================ */
+
+.page-body { background-color: var(--bg); }
+
+section {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 100px 24px;
+  scroll-margin-top: var(--nav-h);
+}
+
+/* Section heading underline */
+section > h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+}
+section > h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* Fade animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.fade-up.show {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* Back-to-top */
+#backToTop {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 46px;
+  height: 46px;
+  font-size: 1.25rem;
+  background-color: var(--dark);
+  color: var(--on-dark);
+  border-radius: 50%;
+  display: none;
+  z-index: 900;
+  box-shadow: var(--shadow);
+  transition: background-color 0.3s, transform 0.3s;
+}
+#backToTop:hover { background-color: var(--accent); color: var(--accent-ink); transform: translateY(-3px); }
