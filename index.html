@@ -261,11 +261,17 @@
 
   <!-- ============ QUOTE MODAL ============ -->
   <div class="modal" id="quoteModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    
+    <input type="hidden" name="access_key" value="c46406ad-40d8-4c48-a320-bf99a745fc45">
+    <input type="hidden" name="subject" value="New Quote Request — MAZA Contractors">
+    <input type="hidden" name="from_name" value="MAZA Website">
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    
     <div class="modal__backdrop" data-close-modal></div>
     <div class="modal__panel" role="document">
       <button class="modal__close" data-close-modal aria-label="Close"><i class="fas fa-times"></i></button>
       <div class="modal__eyebrow"><span class="eyebrow-line"></span>FREE QUOTE</div>
-      <h2 id="modalTitle">Request Your Free Quote</h2>
+      <h2 id="modalTitle">Your Quote Has Been Submitted</h2>
       <p class="modal__sub">We'll get back to you within 24 hours. No obligation, no pressure.</p>
 
       <form class="modal__form" id="quoteForm" novalidate>

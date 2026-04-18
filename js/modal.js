@@ -1,5 +1,5 @@
 /* ============================================================
-   modal.js — quote modal open/close + form submit
+   modal.js — quote modal open/close + Web3Forms submit
    ============================================================ */
 
 (function () {
@@ -12,6 +12,8 @@
   const success = document.getElementById('quoteSuccess');
 
   let lastFocused = null;
+
+  /* ---------- open / close ---------- */
 
   const open = () => {
     lastFocused = document.activeElement;
@@ -41,41 +43,61 @@
     if (e.key === 'Escape' && modal.classList.contains('open')) close();
   });
 
-  // Form submit (front-end only — wire up to your backend later)
+  /* ---------- form submit via Web3Forms ---------- */
+
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
       // Basic required-field check
       let valid = true;
       form.querySelectorAll('[required]').forEach(input => {
         if (!input.value.trim()) {
-          input.style.borderColor = '#e8a23a';
           valid = false;
+          input.classList.add('field-error');
         } else {
-          input.style.borderColor = '';
+          input.classList.remove('field-error');
         }
       });
       if (!valid) return;
 
-      // TODO: POST to backend endpoint
-      form.style.display = 'none';
-      if (success) {
-        success.hidden = false;
-        success.style.display = 'block';
-      }
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
 
-      // Auto-close after 2.4s
-      setTimeout(() => {
-        close();
-        setTimeout(() => {
+      try {
+        // Use FormData — Web3Forms recommended approach for vanilla JS
+        const formData = new FormData(form);
+
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData          // Do NOT set Content-Type header; browser sets it with boundary
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
           form.reset();
-          form.style.display = '';
-          if (success) {
+          form.style.display = 'none';
+          success.hidden = false;
+
+          // Reset form after 5 seconds so it's ready if they reopen
+          setTimeout(() => {
+            form.style.display = '';
             success.hidden = true;
-            success.style.display = '';
-          }
-        }, 400);
-      }, 2400);
+          }, 5000);
+        } else {
+          alert('Something went wrong. Please try again or call us at (647) 564-7144.');
+          console.error('Web3Forms error:', result);
+        }
+      } catch (err) {
+        alert('Network error. Please try again or call us at (647) 564-7144.');
+        console.error('Fetch error:', err);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
     });
   }
 })();
