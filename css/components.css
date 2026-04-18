@@ -333,6 +333,11 @@
 }
 .modal__form textarea { resize: vertical; min-height: 96px; }
 
+.modal__form select option {
+  background: #1a1a1a;
+  color: #f5f0e6;
+}
+
 .select-wrap { position: relative; }
 .select-wrap select {
   appearance: none;
